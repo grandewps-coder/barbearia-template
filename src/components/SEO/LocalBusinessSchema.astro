@@ -1,0 +1,35 @@
+---
+import empresa from "../../data/empresa.json";
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+
+  "name": empresa.nome,
+
+  "description": empresa.descricao,
+
+  "image": empresa.heroImagem,
+
+  "telephone": empresa.telefone,
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": empresa.endereco,
+    "addressLocality": empresa.cidade,
+    "addressRegion": empresa.estado,
+    "postalCode": empresa.cep,
+    "addressCountry": "BR"
+  },
+
+  "areaServed": {
+    "@type": "City",
+    "name": empresa.cidade
+  },
+
+  "sameAs": [
+    empresa.instagram
+  ]
+})}>
+</script>

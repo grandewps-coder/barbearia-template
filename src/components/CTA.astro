@@ -1,0 +1,36 @@
+---
+import empresa from "../data/empresa.json";
+
+import Button from "./ui/Button.astro";
+import Container from "./ui/Container.astro";
+import Section from "./ui/Section.astro";
+---
+
+<Section>
+
+<Container>
+
+<div class="rounded-3xl bg-black px-8 py-16 text-center text-white">
+
+<h2 class="mb-6 text-4xl font-black">
+
+Pronto para renovar o seu visual?
+
+</h2>
+
+<p class="mx-auto mb-10 max-w-2xl text-lg text-neutral-300">
+
+Agende seu horário na Barbearia Fernandes e tenha um atendimento personalizado com quem possui mais de 9 anos de experiência em cortes masculinos, barba e tendências.
+</p>
+
+<Button
+href={empresa.agendamento}
+texto="Agendar agora"
+target="_blank"
+/>
+
+</div>
+
+</Container>
+
+</Section>

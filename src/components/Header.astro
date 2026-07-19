@@ -1,0 +1,71 @@
+---
+import empresa from "../data/empresa.json";
+import Button from "./ui/Button.astro";
+import Container from "./ui/Container.astro";
+---
+
+<header class="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/80 backdrop-blur-md">
+
+  <Container>
+
+    <div class="flex h-20 items-center justify-between">
+
+      <a href="/" class="flex items-center gap-4">
+
+        <img
+          src={empresa.logo}
+          alt={empresa.nome}
+          class="h-14 w-auto"
+        />
+
+        <div>
+
+          <h2 class="text-lg font-bold">
+            {empresa.nome}
+          </h2>
+
+          <p class="text-sm text-neutral-500">
+
+            ★★★★★ Atendimento Premium
+
+          </p>
+
+        </div>
+
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex">
+
+        <a href="#" class="transition hover:text-neutral-500">
+          Início
+        </a>
+
+        <a href="#servicos" class="transition hover:text-neutral-500">
+          Serviços
+        </a>
+
+        <a href="#sobre" class="transition hover:text-neutral-500">
+          Sobre
+        </a>
+
+        <a href="#faq" class="transition hover:text-neutral-500">
+          FAQ
+        </a>
+
+        <a href="#localizacao" class="transition hover:text-neutral-500">
+          Localização
+        </a>
+
+      </nav>
+
+      <Button
+        href={empresa.agendamento}
+        texto="Agendar Horário"
+        target="_blank"
+      />
+
+    </div>
+
+  </Container>
+
+</header>

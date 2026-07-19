@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "Corte Masculino",
+    "descricao": "Cortes modernos, clássicos e personalizados.",
+    "icone": "✂️"
+  },
+  {
+    "nome": "Fade",
+    "descricao": "Degradê com acabamento impecável.",
+    "icone": "🔥"
+  },
+  {
+    "nome": "Barboterapia",
+    "descricao": "Modelagem e acabamento profissional.",
+    "icone": "🪒"
+  },
+  {
+    "nome": "Sobrancelha",
+    "descricao": "Design masculino com precisão.",
+    "icone": "✨"
+  },
+  {
+    "nome": "Platinado",
+    "descricao": "Visual moderno com produtos de qualidade.",
+    "icone": "💎"
+  }
+]

@@ -1,0 +1,63 @@
+---
+import depoimentos from "../data/depoimentos.json";
+
+import Container from "./ui/Container.astro";
+import Card from "./ui/Card.astro";
+import Section from "./ui/Section.astro";
+import SectionTitle from "./ui/SectionTitle.astro";
+---
+
+<Section>
+
+<Container>
+
+<SectionTitle
+title="O que nossos clientes dizem"
+subtitle="A satisfação dos nossos clientes é nossa maior prioridade."
+/>
+
+
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+{
+depoimentos.map((depoimento) => (
+
+<Card>
+
+<div>
+
+<div class="mb-4 text-yellow-500">
+
+{"⭐".repeat(depoimento.nota)}
+
+</div>
+
+
+<p class="mb-6 text-neutral-600">
+
+"{depoimento.texto}"
+
+</p>
+
+
+<h3 class="font-bold">
+
+{depoimento.nome}
+
+</h3>
+
+
+</div>
+
+</Card>
+
+))
+}
+
+
+</div>
+
+</Container>
+
+</Section>

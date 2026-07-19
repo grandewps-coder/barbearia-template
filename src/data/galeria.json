@@ -1,0 +1,26 @@
+[
+  {
+    "imagem": "/images/galeria-02.webp",
+    "titulo": "Corte Degradê"
+  },
+  {
+    "imagem": "/images/galeria-05.png",
+    "titulo": "Platinado"
+  },
+  {
+    "imagem": "/images/galeria-06.png",
+    "titulo": "Fade"
+  },
+  {
+    "imagem": "/images/galeria-04.png",
+    "titulo": "Personalizado"
+  },
+  {
+    "imagem": "/images/galeria-07.png",
+    "titulo": "Barba"
+  },
+  {
+    "imagem": "/images/galeria-01.png",
+    "titulo": "Sobrancelha"
+  }
+]

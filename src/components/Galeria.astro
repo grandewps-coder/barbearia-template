@@ -1,0 +1,47 @@
+---
+import galeria from "../data/galeria.json";
+import Container from "./ui/Container.astro";
+import Section from "./ui/Section.astro";
+import SectionTitle from "./ui/SectionTitle.astro";
+---
+
+<Section id="galeria">
+
+  <Container>
+
+    <SectionTitle
+      title="Alguns dos nossos resultados"
+      subtitle="Cada corte é realizado com atenção aos detalhes e acabamento impecável."
+    />
+
+    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      {galeria.map((foto) => (
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+
+          <img
+            src={foto.imagem}
+            alt={foto.titulo}
+            class="h-80 w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+
+          <div class="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/30"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 transition duration-500 group-hover:opacity-100">
+
+            <h3 class="text-xl font-bold">
+              {foto.titulo}
+            </h3>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </Container>
+
+</Section>

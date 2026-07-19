@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Webert Ferreira",
+    "texto": "Excelente barbeiro,muito competente,sou cliente a muitos anos,e um dia falei pra ele que se ele parar de cortar cabelo aonde que vou e esse o nível do trabalho a muitos anos renovando a alta estima e cuidando de cada detalhe com muita atenção e cuidado ...não e sobre preço e sim valor...",
+    "nota": 5
+  },
+  {
+    "nome": "Lucas Rodrigues",
+    "texto": "Profissional de primeira,melhor barbearia do Brasil,oferece ótimo atendimento,fora a barbearia que tem um excelente espaço.",
+    "nota": 5
+  },
+  {
+    "nome": "Matheus Souza",
+    "texto": "Melhor Barbearia da região, tratamento excepcional, recomendo de mais.",
+    "nota": 5
+  }
+]

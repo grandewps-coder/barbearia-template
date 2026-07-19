@@ -1,0 +1,25 @@
+{
+  "nome": "Barbearia Fernandes",
+  "agendamento": "http://client.tuaagenda.com/c/BarbeariaFernandes3",
+  "logo": "/images/logo.png",
+  "heroImagem": "/images/hero.jpg",
+  "fundacao": "Mais de 9 anos de experiência",
+  "proprietario": "Marcos Vinicius",
+  "proprietarioFoto": "/images/marcos.webp",
+  "experiencia": "Mais de 9 anos de experiência no ramo de barbearia.",
+  "slogan": "A melhor barbearia em Justinópolis",
+  "descricao": "Especialista em cortes masculinos, barba e cuidados com o visual masculino.",
+  "sobre": "Desde 2021, a Barbearia Fernandes oferece atendimento especializado em Justinópolis, Ribeirão das Neves. Sob a liderança de Marcos Vinicius, profissional com mais de 9 anos de experiência no ramo, a barbearia se destaca pela técnica, atenção aos detalhes e paixão por transformar o visual de cada cliente.",
+  "telefone": "(31) 97532-0739",
+  "whatsapp": "5531975320739",
+  "instagram": "https://www.instagram.com/barbearia_fernandes__ofc02",
+  "email": "contato@barbearia.com",
+  "endereco": "Rua Rad. Orlando Cavalcante, 709",
+  "bairro": "Justinópolis",
+  "cidade": "Ribeirão das Neves",
+  "estado": "MG",
+  "cep": "33935-317",
+  "maps":"https://www.google.com/maps/dir/?api=1&destination=Barbearia+Fernandes,+R.+Rad.+Orlando+Cavalcante,+709,+Justinópolis,+Ribeirão+das+Neves+-+MG"
+  
+  
+}

@@ -1,0 +1,108 @@
+---
+import empresa from "../data/empresa.json";
+
+import Container from "./ui/Container.astro";
+import Section from "./ui/Section.astro";
+import SectionTitle from "./ui/SectionTitle.astro";
+---
+
+<Section id="sobre">
+  <Container>
+
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+
+      <!-- Texto -->
+
+      <div>
+
+        <SectionTitle
+          title="Sobre a Barbearia Fernandes"
+          subtitle="Tradição, técnica e cuidado em cada atendimento."
+        />
+
+        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
+          {empresa.sobre}
+        </p>
+
+        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
+          Especializada em cortes masculinos modernos, corte degradê,
+          fade, barba, sobrancelha, pigmentação, platinados,
+          progressiva e relaxamento, a Barbearia Fernandes busca
+          entregar muito mais do que um corte: uma experiência de
+          autoestima, confiança e satisfação.
+        </p>
+
+        <div class="mt-8 rounded-2xl bg-neutral-100 p-6">
+
+          <h3 class="text-xl font-bold">
+            {empresa.proprietario}
+          </h3>
+
+          <p class="mt-2 text-neutral-600">
+            {empresa.experiencia}
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Foto -->
+
+      <div class="flex justify-center">
+
+        <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+
+          <img
+            src={empresa.proprietarioFoto}
+            alt={empresa.proprietario}
+            class="h-[600px] w-[450px] object-cover"
+          />
+
+          <div class="absolute bottom-0 w-full bg-black/70 p-6 text-white backdrop-blur-sm">
+
+            <h3 class="text-2xl font-bold">
+              {empresa.proprietario}
+            </h3>
+
+            <p class="mt-2 text-neutral-200">
+              Especialista em cortes modernos e tendências.
+            </p>
+
+            <div class="mt-4 flex gap-8">
+
+              <div>
+
+                <p class="text-3xl font-black">
+                  9+
+                </p>
+
+                <p class="text-sm">
+                  Anos de experiência
+                </p>
+
+              </div>
+
+              <div>
+
+                <p class="text-3xl font-black">
+                  ★★★★★
+                </p>
+
+                <p class="text-sm">
+                  Atendimento de qualidade
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </Container>
+</Section>

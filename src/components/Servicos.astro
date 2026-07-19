@@ -1,0 +1,64 @@
+---
+import servicos from "../data/servicos.json";
+
+import Container from "./ui/Container.astro";
+import Card from "./ui/Card.astro";
+import Section from "./ui/Section.astro";
+import SectionTitle from "./ui/SectionTitle.astro";
+---
+
+<Section id="servicos">
+
+<Container>
+
+<SectionTitle
+title="Nossos Serviços"
+subtitle="Cuidados masculinos com qualidade, técnica e atenção aos detalhes."
+/>
+
+
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+{
+servicos.map((servico) => (
+
+<Card>
+
+<div>
+
+<div class="mb-4 text-4xl">
+
+{servico.icone}
+
+</div>
+
+
+<h3 class="mb-3 text-xl font-bold">
+
+{servico.nome}
+
+</h3>
+
+
+<p class="text-neutral-600">
+
+{servico.descricao}
+
+</p>
+
+
+</div>
+
+</Card>
+
+))
+}
+
+
+</div>
+
+
+</Container>
+
+</Section>
