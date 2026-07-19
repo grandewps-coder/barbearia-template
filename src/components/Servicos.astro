@@ -9,56 +9,65 @@ import SectionTitle from "./ui/SectionTitle.astro";
 
 <Section id="servicos">
 
-<Container>
+  <Container>
 
-<SectionTitle
-title="Nossos Serviços"
-subtitle="Cuidados masculinos com qualidade, técnica e atenção aos detalhes."
-/>
+    <SectionTitle
+      title="Nossos Serviços"
+      subtitle="Cuidados masculinos com qualidade, técnica e atenção aos detalhes."
+    />
 
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        servicos.map((servico, index) => (
 
+          <Card class="group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
-{
-servicos.map((servico) => (
+            <div>
 
-<Card>
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
 
-<div>
+                <span class="text-3xl">
 
-<div class="mb-4 text-4xl">
+                  {
+                    index === 0 ? "✂" :
+                    index === 1 ? "✦" :
+                    index === 2 ? "🪒" :
+                    index === 3 ? "◉" :
+                    "◆"
+                  }
 
-{servico.icone}
+                </span>
 
-</div>
+              </div>
 
+              <h3 class="mb-3 text-2xl font-bold">
 
-<h3 class="mb-3 text-xl font-bold">
+                {servico.nome}
 
-{servico.nome}
+              </h3>
 
-</h3>
+              <p class="mb-6 text-neutral-600 leading-relaxed">
 
+                {servico.descricao}
 
-<p class="text-neutral-600">
+              </p>
 
-{servico.descricao}
+              <span class="font-semibold text-amber-700 transition group-hover:translate-x-1 inline-block">
 
-</p>
+                Atendimento Premium →
 
+              </span>
 
-</div>
+            </div>
 
-</Card>
+          </Card>
 
-))
-}
+        ))
+      }
 
+    </div>
 
-</div>
-
-
-</Container>
+  </Container>
 
 </Section>

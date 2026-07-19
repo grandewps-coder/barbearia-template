@@ -1,142 +1,58 @@
 ---
-import Badge from "./ui/Badge.astro";
 import empresa from "../data/empresa.json";
 import Button from "./ui/Button.astro";
-import Container from "./ui/Container.astro";
 ---
 
-<section class="bg-neutral-100 py-24">
+<section
+  
+  class="relative flex min-h-screen items-center justify-center overflow-hidden pt-24"
+>
+>
 
-<Container>
+  <!-- Imagem de fundo -->
+  <img
+    src="/images/hero.png"
+    alt="Barbearia Fernandes"
+    class="absolute inset-0 h-full w-full object-cover object-[0%] md:object-center"
+  />
 
-<div class="grid items-center gap-16 lg:grid-cols-2">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/60"></div>
 
-<div>
+  <!-- Conteúdo -->
+  <div class="relative z-10 mx-auto max-w-6xl px-6 text-center text-white">
 
-<div class="mb-6">
+    <span class="inline-block rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm backdrop-blur">
+      {empresa.fundacao}
+    </span>
 
-<Badge text={empresa.fundacao} />
+    <h1 class="mt-8 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
 
-</div>
+      {empresa.slogan}
 
-<h1 class="mb-6 text-5xl font-black leading-tight">
+    </h1>
 
-{empresa.slogan}
+    <p class="mx-auto mt-6 max-w-xl text-lg text-neutral-100">
 
-</h1>
-
-<div class="mt-6 space-y-3 text-neutral-700">
-
-  <div class="flex items-center gap-3">
-
-    <span class="text-xl">✔</span>
-
-    <span>Mais de 9 anos de experiência</span>
-
-  </div>
-
-  <div class="flex items-center gap-3">
-
-    <span class="text-xl">✔</span>
-
-    <span>Especialista em Fade, Barba e Cortes Modernos</span>
-
-  </div>
-
-  <div class="flex items-center gap-3">
-
-    <span class="text-xl">✔</span>
-
-    <span>Agendamento Online</span>
-
-  </div>
-
-</div>
-
-<p class="mb-10 text-lg text-neutral-600">
-
-{empresa.descricao}
-
-</p>
-
-<div class="flex gap-4">
-
-<Button
-
-href={`https://wa.me/${empresa.whatsapp}`}
-
-texto="Agendar Horário"
-
-target="_blank"
-
-/>
-
-<Button
-
-href={empresa.maps}
-
-texto="Como chegar"
-
-target="_blank"
-
-/>
-
-<div class="mt-10 flex items-center gap-6">
-
-  <div>
-
-    <p class="text-3xl font-black">
-
-      9+
+      Fade Premium • Barboterapia • Platinado • Atendimento Personalizado
 
     </p>
 
-    <p class="text-sm text-neutral-500">
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <Button
+        href={empresa.agendamento}
+        texto="Agendar Horário"
+        target="_blank"
+      />
 
-      Anos de experiência
+      <Button
+        href={empresa.maps}
+        texto="Como chegar"
+        target="_blank"
+      />
 
-    </p>
-
-  </div>
-
-  <div>
-
-    <p class="text-3xl font-black">
-
-      ★★★★★
-
-    </p>
-
-    <p class="text-sm text-neutral-500">
-
-      Atendimento de qualidade
-
-    </p>
+    </div>
 
   </div>
 
-</div>
-
-</div>
-
-</div>
-
-<div>
-
-<img
-
-src="/images/hero.png"
-
-alt="Barbearia"
-
-class="rounded-3xl shadow-2xl"
-
-/>
-
-</div>
-
-</div>
-
-</Container>
-
-</section>
+</section>  

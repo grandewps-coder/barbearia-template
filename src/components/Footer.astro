@@ -3,14 +3,13 @@ import empresa from "../data/empresa.json";
 import Container from "./ui/Container.astro";
 ---
 
-<footer class="mt-20 border-t border-neutral-200 bg-neutral-950 py-14 text-white">
+<footer class="mt-20 border-t border-neutral-800 bg-neutral-950 text-white">
 
   <Container>
 
-    <div class="grid gap-12 md:grid-cols-3">
+    <div class="grid gap-12 py-16 md:grid-cols-3">
 
       <!-- Empresa -->
-
       <div>
 
         <img
@@ -19,41 +18,58 @@ import Container from "./ui/Container.astro";
           class="mb-5 h-16 w-auto"
         />
 
-        <p class="text-neutral-400">
-
+        <p class="leading-relaxed text-neutral-400">
           Especialistas em cortes masculinos, barba e tendências.
-          Atendimento personalizado em Justinópolis.
-
+          Atendimento personalizado em Justinópolis, Ribeirão das Neves.
         </p>
 
       </div>
 
       <!-- Contato -->
-
       <div>
 
-        <h3 class="mb-4 text-xl font-bold">
-
+        <h3 class="mb-6 text-xl font-bold">
           Contato
-
         </h3>
 
-        <ul class="space-y-3 text-neutral-400">
+        <ul class="space-y-4 text-neutral-400">
 
-          <li>📞 {empresa.telefone}</li>
+          <li class="flex items-center gap-3">
+            📞
+            <span>{empresa.telefone}</span>
+          </li>
 
-          <li>📍 {empresa.endereco}</li>
+          <li class="flex items-center gap-3">
+            📍
+            <span>{empresa.endereco}</span>
+          </li>
 
-          <li>{empresa.bairro} - {empresa.cidade}</li>
+          <li class="flex items-center gap-3">
+            🏙️
+            <span>{empresa.bairro} - {empresa.cidade}</span>
+          </li>
 
           <li>
+
             <a
               href={empresa.instagram}
               target="_blank"
-              class="hover:text-white"
+              class="flex items-center gap-3 transition hover:text-amber-400"
             >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-5 w-5"
+              >
+                <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+              </svg>
+
               Instagram
+
             </a>
+
           </li>
 
         </ul>
@@ -61,25 +77,20 @@ import Container from "./ui/Container.astro";
       </div>
 
       <!-- Agendamento -->
-
       <div>
 
-        <h3 class="mb-4 text-xl font-bold">
-
+        <h3 class="mb-6 text-xl font-bold">
           Agende seu horário
-
         </h3>
 
-        <p class="mb-6 text-neutral-400">
-
-          Clique no botão abaixo para agendar seu atendimento.
-
+        <p class="mb-6 leading-relaxed text-neutral-400">
+          Faça seu agendamento online e garanta um atendimento personalizado com horário reservado.
         </p>
 
         <a
           href={empresa.agendamento}
           target="_blank"
-          class="inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black transition hover:scale-105"
+          class="inline-flex items-center rounded-xl bg-amber-500 px-6 py-3 font-semibold text-black transition duration-300 hover:scale-105 hover:bg-amber-400"
         >
 
           Agendar agora
@@ -90,9 +101,15 @@ import Container from "./ui/Container.astro";
 
     </div>
 
-    <div class="mt-14 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500">
+    <div class="border-t border-neutral-800 py-6 text-center">
 
-      © 2026 {empresa.nome}. Todos os direitos reservados.
+      <p class="text-sm text-neutral-500">
+        © 2026 {empresa.nome}. Todos os direitos reservados.
+      </p>
+
+      <p class="mt-2 text-xs text-neutral-600">
+        Desenvolvido com Astro • Tailwind CSS
+      </p>
 
     </div>
 

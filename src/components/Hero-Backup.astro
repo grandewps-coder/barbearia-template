@@ -1,0 +1,142 @@
+---
+import Badge from "./ui/Badge.astro";
+import empresa from "../data/empresa.json";
+import Button from "./ui/Button.astro";
+import Container from "./ui/Container.astro";
+---
+
+<section class="bg-neutral-100 py-24">
+
+<Container>
+
+<div class="grid items-center gap-16 lg:grid-cols-2">
+
+<div>
+
+<div class="mb-6">
+
+<Badge text={empresa.fundacao} />
+
+</div>
+
+<h1 class="mb-6 text-5xl font-black leading-tight">
+
+{empresa.slogan}
+
+</h1>
+
+<div class="mt-6 space-y-3 text-neutral-700">
+
+  <div class="flex items-center gap-3">
+
+    <span class="text-xl">✔</span>
+
+    <span>Mais de 9 anos de experiência</span>
+
+  </div>
+
+  <div class="flex items-center gap-3">
+
+    <span class="text-xl">✔</span>
+
+    <span>Especialista em Fade, Barba e Cortes Modernos</span>
+
+  </div>
+
+  <div class="flex items-center gap-3">
+
+    <span class="text-xl">✔</span>
+
+    <span>Agendamento Online</span>
+
+  </div>
+
+</div>
+
+<p class="mb-10 text-lg text-neutral-600">
+
+{empresa.descricao}
+
+</p>
+
+<div class="flex gap-4">
+
+<Button
+
+href={`https://wa.me/${empresa.whatsapp}`}
+
+texto="Agendar Horário"
+
+target="_blank"
+
+/>
+
+<Button
+
+href={empresa.maps}
+
+texto="Como chegar"
+
+target="_blank"
+
+/>
+
+<div class="mt-10 flex items-center gap-6">
+
+  <div>
+
+    <p class="text-3xl font-black">
+
+      9+
+
+    </p>
+
+    <p class="text-sm text-neutral-500">
+
+      Anos de experiência
+
+    </p>
+
+  </div>
+
+  <div>
+
+    <p class="text-3xl font-black">
+
+      ★★★★★
+
+    </p>
+
+    <p class="text-sm text-neutral-500">
+
+      Atendimento de qualidade
+
+    </p>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<img
+
+src="/images/hero.png"
+
+alt="Barbearia"
+
+class="rounded-3xl shadow-2xl"
+
+/>
+
+</div>
+
+</div>
+
+</Container>
+
+</section>

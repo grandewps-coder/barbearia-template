@@ -1,6 +1,5 @@
 ---
 import empresa from "../data/empresa.json";
-
 import Button from "./ui/Button.astro";
 import Container from "./ui/Container.astro";
 import Section from "./ui/Section.astro";
@@ -8,29 +7,52 @@ import Section from "./ui/Section.astro";
 
 <Section>
 
-<Container>
+  <Container>
 
-<div class="rounded-3xl bg-black px-8 py-16 text-center text-white">
+    <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 px-8 py-16 text-center text-white shadow-2xl">
 
-<h2 class="mb-6 text-4xl font-black">
+      <p class="mb-3 text-sm uppercase tracking-[0.3em] text-amber-400">
+        Barbearia Fernandes
+      </p>
 
-Pronto para renovar o seu visual?
+      <h2 class="mx-auto max-w-3xl text-4xl font-black leading-tight md:text-5xl">
+        Seu próximo corte começa com um clique.
+      </h2>
 
-</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-neutral-300">
+        Atendimento personalizado, ambiente confortável e mais de 9 anos de experiência para entregar um resultado que valoriza seu estilo.
+      </p>
 
-<p class="mx-auto mb-10 max-w-2xl text-lg text-neutral-300">
+      <div class="mt-10 flex flex-wrap justify-center gap-10 text-center">
 
-Agende seu horário na Barbearia Fernandes e tenha um atendimento personalizado com quem possui mais de 9 anos de experiência em cortes masculinos, barba e tendências.
-</p>
+        <div>
+          <p class="text-3xl font-black text-amber-400">9+</p>
+          <p class="text-sm text-neutral-400">
+            Anos de experiência
+          </p>
+        </div>
 
-<Button
-href={empresa.agendamento}
-texto="Agendar agora"
-target="_blank"
-/>
+        <div>
+          <p class="text-3xl font-black text-amber-400">★★★★★</p>
+          <p class="text-sm text-neutral-400">
+            Clientes satisfeitos
+          </p>
+        </div>
 
-</div>
+      </div>
 
-</Container>
+      <div class="mt-12">
+
+        <Button
+          href={empresa.agendamento}
+          texto="Agendar meu horário"
+          target="_blank"
+        />
+
+      </div>
+
+    </div>
+
+  </Container>
 
 </Section>

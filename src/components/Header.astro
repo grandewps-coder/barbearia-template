@@ -4,65 +4,80 @@ import Button from "./ui/Button.astro";
 import Container from "./ui/Container.astro";
 ---
 
-<header class="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/80 backdrop-blur-md">
+<header class="absolute left-0 top-0 z-50 w-full">
 
   <Container>
 
     <div class="flex h-20 items-center justify-between">
 
-      <a href="/" class="flex items-center gap-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
 
         <img
           src={empresa.logo}
           alt={empresa.nome}
-          class="h-14 w-auto"
+          class="h-12 w-auto md:h-14"
         />
 
-        <div>
+        <!-- Esconde o texto em celulares -->
+        <div class="hidden sm:block">
 
-          <h2 class="text-lg font-bold">
+          <h2 class="text-lg font-bold text-white">
             {empresa.nome}
           </h2>
 
-          <p class="text-sm text-neutral-500">
-
+          <p class="text-sm text-neutral-300">
             ★★★★★ Atendimento Premium
-
           </p>
 
         </div>
 
       </a>
 
-      <nav class="hidden items-center gap-8 lg:flex">
+      <!-- Menu Desktop -->
+      <nav class="hidden items-center gap-8 text-white lg:flex">
 
-        <a href="#" class="transition hover:text-neutral-500">
+        <a href="#">
           Início
         </a>
 
-        <a href="#servicos" class="transition hover:text-neutral-500">
+        <a href="#servicos">
           Serviços
         </a>
 
-        <a href="#sobre" class="transition hover:text-neutral-500">
+        <a href="#sobre">
           Sobre
         </a>
 
-        <a href="#faq" class="transition hover:text-neutral-500">
+        <a href="#faq">
           FAQ
         </a>
 
-        <a href="#localizacao" class="transition hover:text-neutral-500">
+        <a href="#localizacao">
           Localização
         </a>
 
       </nav>
 
-      <Button
+      <!-- Desktop -->
+      <div class="hidden md:block">
+
+        <Button
+          href={empresa.agendamento}
+          texto="Agendar Horário"
+          target="_blank"
+        />
+
+      </div>
+
+      <!-- Mobile -->
+      <a
         href={empresa.agendamento}
-        texto="Agendar Horário"
         target="_blank"
-      />
+        class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black shadow-lg transition hover:scale-105 md:hidden"
+      >
+        Agendar
+      </a>
 
     </div>
 
