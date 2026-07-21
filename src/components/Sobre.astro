@@ -3,100 +3,176 @@ import empresa from "../data/empresa.json";
 
 import Container from "./ui/Container.astro";
 import Section from "./ui/Section.astro";
-import SectionTitle from "./ui/SectionTitle.astro";
 ---
 
 <Section id="sobre">
+
   <Container>
 
     <div class="grid items-center gap-16 lg:grid-cols-2">
 
-      <!-- Texto -->
+      <!-- FOTO -->
 
-      <div>
+      <div class="relative flex justify-center">
 
-        <SectionTitle
-          title="Sobre a Barbearia Fernandes"
-          subtitle="Tradição, técnica e cuidado em cada atendimento."
-        />
+      <div class="absolute h-[450px] w-[320px] rounded-[32px] bg-amber-100 -z-10 translate-x-6 translate-y-6"></div>
 
-        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
-          {empresa.sobre}
-        </p>
+        <div class="relative overflow-hidden rounded-[32px] shadow-2xl">
 
-        <p class="mt-6 text-lg leading-relaxed text-neutral-600">
-          Especializada em cortes masculinos modernos, corte degradê,
-          fade, barba, sobrancelha, pigmentação, platinados,
-          progressiva e relaxamento, a Barbearia Fernandes busca
-          entregar muito mais do que um corte: uma experiência de
-          autoestima, confiança e satisfação.
-        </p>
+          <img
+            src={empresa.proprietarioFoto}
+            alt={empresa.proprietario}
+            class="h-[620px] w-full max-w-md object-cover"
+          />
 
-        <div class="mt-8 rounded-2xl bg-neutral-100 p-6">
+          <!-- Card flutuante -->
 
-          <h3 class="text-xl font-bold">
-            {empresa.proprietario}
-          </h3>
+          <div class="absolute bottom-6 right-6 rounded-2xl border border-white/20 bg-black/45 px-6 py-5 text-white backdrop-blur-md shadow-xl">
 
-          <p class="mt-2 text-neutral-600">
-            {empresa.experiencia}
+            <p class="text-2xl font-black">
+             ★★★★★
+
           </p>
+
+           <p class="mt-1 text-sm uppercase tracking-wider text-white/70">
+            Google
+
+            
+          </p>
+
+          </div>
 
         </div>
 
       </div>
 
-      <!-- Foto -->
+      <!-- TEXTO -->
 
-      <div class="flex justify-center">
+      <div>
 
-        <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+        <span class="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700">
 
-          <img
-            src={empresa.proprietarioFoto}
-            alt={empresa.proprietario}
-            class="h-[600px] w-[450px] object-cover"
-          />
+          Desde 2016
 
-          <div class="absolute bottom-0 w-full bg-black/70 p-6 text-white backdrop-blur-sm">
+        </span>
 
-            <h3 class="text-2xl font-bold">
-              {empresa.proprietario}
-            </h3>
+        <h2 class="mt-6 text-4xl font-black leading-tight md:text-5xl">
 
-            <p class="mt-2 text-neutral-200">
-              Especialista em cortes modernos e tendências.
-            </p>
+          Mais do que cortes.
 
-            <div class="mt-4 flex gap-8">
+          <br>
 
-              <div>
+          Transformamos autoestima.
 
-                <p class="text-3xl font-black">
-                  9+
-                </p>
+        </h2>
 
-                <p class="text-sm">
-                  Anos de experiência
-                </p>
+        <p class="mt-8 text-lg leading-8 text-neutral-600">
 
-              </div>
+          {empresa.sobre}
 
-              <div>
+        </p>
 
-                <p class="text-3xl font-black">
-                  ★★★★★
-                </p>
+        <div class="mt-10 grid gap-5">
 
-                <p class="text-sm">
-                  Atendimento de qualidade
-                </p>
+          <div class="flex items-center gap-4">
 
-              </div>
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-xl">
+
+              ✂
+
+            </div>
+
+            <div>
+
+              <h3 class="font-bold">
+
+                Atendimento Personalizado
+
+              </h3>
+
+              <p class="text-neutral-600">
+
+                Cada cliente recebe um corte pensado para seu estilo.
+
+              </p>
 
             </div>
 
           </div>
+
+          <div class="flex items-center gap-4">
+
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-xl">
+
+              ★
+
+            </div>
+
+            <div>
+
+              <h3 class="font-bold">
+
+                Técnicas Modernas
+
+              </h3>
+
+              <p class="text-neutral-600">
+
+                Fade, barba, platinado e tendências atuais.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="flex items-center gap-4">
+
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-xl">
+
+              ✔
+
+            </div>
+
+            <div>
+
+              <h3 class="font-bold">
+
+                Qualidade em cada detalhe
+
+              </h3>
+
+              <p class="text-neutral-600">
+
+                Produtos profissionais e acabamento impecável.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mt-12 rounded-3xl border border-neutral-200 bg-neutral-50 p-6">
+
+          <p class="text-sm uppercase tracking-[0.2em] text-neutral-500">
+
+            Responsável
+
+          </p>
+
+          <h3 class="mt-2 text-2xl font-black">
+
+            {empresa.proprietario}
+
+          </h3>
+
+          <p class="mt-2 text-neutral-600">
+
+            {empresa.experiencia}
+
+          </p>
 
         </div>
 
@@ -105,4 +181,5 @@ import SectionTitle from "./ui/SectionTitle.astro";
     </div>
 
   </Container>
+
 </Section>

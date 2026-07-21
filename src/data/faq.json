@@ -1,18 +1,22 @@
 [
   {
-    "pergunta": "Qual o endereço da Barbearia Fernandes?",
-    "resposta": "Estamos localizados na Rua Rad. Orlando Cavalcante, 709, em Justinópolis, Ribeirão das Neves - MG."
+    "pergunta": "Preciso agendar meu horário?",
+    "resposta": "Sim. Trabalhamos com atendimento agendado para garantir conforto, pontualidade e um atendimento exclusivo."
   },
   {
-    "pergunta": "Precisa agendar horário?",
-    "resposta": "Recomendamos agendar pelo WhatsApp para garantir seu atendimento no melhor horário."
+    "pergunta": "Quais formas de pagamento são aceitas?",
+    "resposta": "Aceitamos Pix, cartões de crédito, débito e dinheiro."
   },
   {
-    "pergunta": "Quais serviços a barbearia oferece?",
-    "resposta": "Oferecemos corte masculino, fade, barba, sobrancelha, platinado, relaxamento, progressiva e pigmentação."
+    "pergunta": "Quanto tempo dura um atendimento?",
+    "resposta": "Em média entre 40 e 60 minutos, dependendo do serviço escolhido."
   },
   {
-    "pergunta": "Como faço para marcar meu horário?",
-    "resposta": "Você pode clicar no botão de WhatsApp do site e falar diretamente com nossa equipe."
+    "pergunta": "Vocês fazem barba e sobrancelha?",
+    "resposta": "Sim. Também realizamos barboterapia, design de sobrancelha e outros serviços masculinos."
+  },
+  {
+    "pergunta": "Onde a barbearia está localizada?",
+    "resposta": "Estamos em Justinópolis, Ribeirão das Neves/MG, com fácil acesso e localização privilegiada."
   }
 ]

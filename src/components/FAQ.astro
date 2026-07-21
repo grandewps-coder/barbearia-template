@@ -8,45 +8,55 @@ import SectionTitle from "./ui/SectionTitle.astro";
 
 <Section id="faq">
 
-<Container>
+  <Container>
 
-<SectionTitle
-title="Perguntas Frequentes"
-subtitle="Confira as principais dúvidas dos nossos clientes."
-/>
+    <SectionTitle
+      title="Perguntas Frequentes"
+      subtitle="Tire suas dúvidas antes mesmo de agendar seu atendimento."
+    />
 
+    <div class="mx-auto mt-14 max-w-4xl space-y-5">
 
-<div class="mx-auto max-w-3xl space-y-4">
+      {
+        faq.map((item) => (
 
+          <details
+            class="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:shadow-xl"
+          >
 
-{
-faq.map((item) => (
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-7 py-6 text-lg font-bold"
+            >
 
-<details class="rounded-2xl border border-neutral-200 bg-white p-6">
+              <span>
+                {item.pergunta}
+              </span>
 
-<summary class="cursor-pointer font-bold">
+              <span
+                class="text-2xl text-amber-500 transition duration-300 group-open:rotate-45"
+              >
+                +
+              </span>
 
-{item.pergunta}
+            </summary>
 
-</summary>
+            <div class="border-t border-neutral-100 px-7 py-6">
 
+              <p class="leading-8 text-neutral-600">
 
-<p class="mt-4 text-neutral-600">
+                {item.resposta}
 
-{item.resposta}
+              </p>
 
-</p>
+            </div>
 
+          </details>
 
-</details>
+        ))
+      }
 
-))
-}
+    </div>
 
-
-</div>
-
-
-</Container>
+  </Container>
 
 </Section>

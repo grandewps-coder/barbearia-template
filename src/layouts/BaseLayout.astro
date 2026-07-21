@@ -23,89 +23,143 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <head>
 
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
-/>
+  <!-- Charset -->
+  <meta charset="UTF-8" />
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
-/>
+  <!-- Responsividade -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet"
-/>
+  <!-- SEO -->
+  <title>{title}</title>
 
-<meta charset="UTF-8" />
+  <meta
+    name="description"
+    content={description}
+  />
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-/>
+  <meta
+    name="keywords"
+    content="barbearia, barbeiro, corte masculino, fade, barba, Justinópolis, Ribeirão das Neves"
+  />
 
-<link rel="icon" type="image/png" href="/icons/favicon.png" />
+  <meta
+    name="author"
+    content="GrandeWPS"
+  />
 
-<title>{title}</title>
+  <meta
+    name="robots"
+    content="index, follow"
+  />
 
-<meta
-name="description"
-content={description}
-/>
+  <meta
+    name="theme-color"
+    content="#111111"
+  />
 
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content="/og-image.jpg" />
-<meta property="og:type" content="website" />
+  <!-- Canonical -->
 
-<meta property="og:locale" content="pt_BR" />
+  <link
+    rel="canonical"
+    href={canonicalURL}
+  />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content="/og-image.jpg" />
+  <!-- Favicon -->
 
-<LocalBusinessSchema />
+  <link
+    rel="icon"
+    href="/logo.png"
+  />
 
-<link
-rel="canonical"
-href={canonicalURL}
-/>
+  <!-- Google Fonts -->
 
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
 
-<meta property="og:type" content="website" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
 
-<meta
-property="og:title"
-content={title}
-/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-<meta
-property="og:description"
-content={description}
-/>
+  <!-- Open Graph -->
 
+  <meta
+    property="og:type"
+    content="website"
+  />
 
-<meta
-property="og:locale"
-content="pt_BR"
-/>
+  <meta
+    property="og:title"
+    content={title}
+  />
 
+  <meta
+    property="og:description"
+    content={description}
+  />
 
-<link
-rel="icon"
-href="/images/favicon.png"
-/>
+  <meta
+    property="og:image"
+    content="/og-image.jpg"
+  />
 
+  <meta
+    property="og:url"
+    content={canonicalURL}
+  />
+
+  <meta
+    property="og:site_name"
+    content="Barbearia Fernandes"
+  />
+
+  <meta
+    property="og:locale"
+    content="pt_BR"
+  />
+
+  <!-- Twitter -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content={title}
+  />
+
+  <meta
+    name="twitter:description"
+    content={description}
+  />
+
+  <meta
+    name="twitter:image"
+    content="/og-image.jpg"
+  />
+
+  <!-- Schema -->
+
+  <LocalBusinessSchema />
 
 </head>
 
-
 <body>
 
-<slot />
+  <slot />
 
 </body>
 
