@@ -70,17 +70,78 @@ import Container from "./ui/Container.astro";
 
       </div>
 
-      <!-- Mobile -->
-      <a
-        href={empresa.agendamento}
-        target="_blank"
-        class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black shadow-lg transition hover:scale-105 md:hidden"
-      >
-        Agendar
-      </a>
+      <!-- Botão Mobile -->
+<button
+  id="menu-button"
+  class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-black shadow-lg md:hidden"
+  aria-label="Abrir menu"
+>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+
+  </svg>
+
+</button>
 
     </div>
 
   </Container>
 
+  <div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 hidden bg-black/95 text-white"
+>
+
+  <div class="flex h-full flex-col items-center justify-center gap-8 text-2xl">
+
+    <a href="#">Início</a>
+
+    <a href="#servicos">Serviços</a>
+
+    <a href="#sobre">Sobre</a>
+
+    <a href="#faq">FAQ</a>
+
+    <a href="#localizacao">Localização</a>
+
+    <a
+      href={empresa.agendamento}
+      target="_blank"
+      class="mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-black"
+    >
+
+      Agendar Horário
+
+    </a>
+
+  </div>
+
+</div>
+
 </header>
+
+<script>
+
+const button = document.getElementById("menu-button");
+const menu = document.getElementById("mobile-menu");
+
+button?.addEventListener("click", () => {
+
+    menu?.classList.toggle("hidden");
+
+});
+
+</script>

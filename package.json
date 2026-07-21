@@ -14,8 +14,12 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.3",
+    "aos": "^2.3.4",
     "astro": "^7.1.1",
     "lucide": "^1.25.0",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.8"
   }
 }

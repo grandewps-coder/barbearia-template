@@ -17,10 +17,13 @@ import Button from "./ui/Button.astro";
   />
 
   <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/60"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/60"></div>
 
   <!-- Conteúdo -->
-  <div class="relative z-10 mx-auto max-w-6xl px-6 text-center text-white">
+  <div
+  data-aos="fade-up"
+  class="relative z-10 mx-auto max-w-6xl px-6 text-center text-white"
+>
 
     <span class="inline-block rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm backdrop-blur">
       {empresa.fundacao}

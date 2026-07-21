@@ -21,12 +21,11 @@ import SectionTitle from "./ui/SectionTitle.astro";
       {
         servicos.map((servico, index) => (
 
-          <Card class="group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <Card class="group overflow-hidden border border-neutral-200 transition-all duration-500 hover:-translate-y-3 hover:border-amber-300 hover:shadow-2xl">
 
             <div>
 
-              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
-
+              <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 transition duration-300 group-hover:scale-110">
                 <span class="text-3xl">
 
                   {
@@ -53,7 +52,7 @@ import SectionTitle from "./ui/SectionTitle.astro";
 
               </p>
 
-              <span class="font-semibold text-amber-700 transition group-hover:translate-x-1 inline-block">
+              <span class="inline-flex items-center gap-2 font-semibold text-amber-700 transition-all duration-300 group-hover:translate-x-2">
 
                 Atendimento Premium →
 
