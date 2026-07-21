@@ -4,7 +4,7 @@ import Button from "./ui/Button.astro";
 import Container from "./ui/Container.astro";
 ---
 
-<header class="absolute left-0 top-0 z-50 w-full">
+<header class="absolute inset-x-0 top-0 z-50">
 
   <Container>
 
@@ -16,10 +16,9 @@ import Container from "./ui/Container.astro";
         <img
           src={empresa.logo}
           alt={empresa.nome}
-          class="h-12 w-auto md:h-14"
+          class="h-12 md:h-14 w-auto"
         />
 
-        <!-- Esconde o texto em celulares -->
         <div class="hidden sm:block">
 
           <h2 class="text-lg font-bold text-white">
@@ -34,32 +33,32 @@ import Container from "./ui/Container.astro";
 
       </a>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden items-center gap-8 text-white lg:flex">
+      <!-- Desktop -->
 
-        <a href="#">
+      <nav class="hidden lg:flex items-center gap-8 text-white">
+
+        <a href="#top" class="hover:text-amber-300 transition">
           Início
         </a>
 
-        <a href="#servicos">
+        <a href="#servicos" class="hover:text-amber-300 transition">
           Serviços
         </a>
 
-        <a href="#sobre">
+        <a href="#sobre" class="hover:text-amber-300 transition">
           Sobre
         </a>
 
-        <a href="#faq">
+        <a href="#faq" class="hover:text-amber-300 transition">
           FAQ
         </a>
 
-        <a href="#localizacao">
+        <a href="#localizacao" class="hover:text-amber-300 transition">
           Localização
         </a>
 
       </nav>
 
-      <!-- Desktop -->
       <div class="hidden md:block">
 
         <Button
@@ -71,76 +70,119 @@ import Container from "./ui/Container.astro";
       </div>
 
       <!-- Botão Mobile -->
-<button
-  id="menu-button"
-  class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-black shadow-lg md:hidden"
-  aria-label="Abrir menu"
->
 
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
+      <button
+        id="menuButton"
+        class="md:hidden rounded-xl bg-white p-3 shadow-lg"
+      >
 
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M4 6h16M4 12h16M4 18h16"
-    />
+        ☰
 
-  </svg>
-
-</button>
+      </button>
 
     </div>
 
   </Container>
 
-  <div
-  id="mobile-menu"
-  class="fixed inset-0 z-40 hidden bg-black/95 text-white"
+</header>
+
+<!-- Overlay -->
+
+<div
+  id="overlay"
+  class="fixed inset-0 z-[90] hidden bg-black/60"
+></div>
+
+<!-- Menu -->
+
+<aside
+  id="mobileMenu"
+  class="fixed right-0 top-0 z-[100] h-screen w-72 translate-x-full bg-neutral-950 p-8 text-white transition-transform duration-300"
 >
 
-  <div class="flex h-full flex-col items-center justify-center gap-8 text-2xl">
+  <div class="mb-10 flex items-center justify-between">
 
-    <a href="#">Início</a>
+    <h2 class="text-xl font-bold">
 
-    <a href="#servicos">Serviços</a>
+      Menu
 
-    <a href="#sobre">Sobre</a>
+    </h2>
 
-    <a href="#faq">FAQ</a>
-
-    <a href="#localizacao">Localização</a>
-
-    <a
-      href={empresa.agendamento}
-      target="_blank"
-      class="mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-black"
+    <button
+      id="closeMenu"
+      class="text-3xl"
     >
 
-      Agendar Horário
+      ✕
 
-    </a>
+    </button>
 
   </div>
 
-</div>
+  <nav class="flex flex-col gap-6 text-lg">
 
-</header>
+    <a href="#top" class="mobile-link">
+      Início
+    </a>
+
+    <a href="#servicos" class="mobile-link">
+      Serviços
+    </a>
+
+    <a href="#sobre" class="mobile-link">
+      Sobre
+    </a>
+
+    <a href="#faq" class="mobile-link">
+      FAQ
+    </a>
+
+    <a href="#localizacao" class="mobile-link">
+      Localização
+    </a>
+
+  </nav>
+
+  <a
+    href={empresa.agendamento}
+    target="_blank"
+    class="mt-10 inline-block rounded-xl bg-amber-500 px-6 py-4 font-bold text-black"
+  >
+
+    Agendar Horário
+
+  </a>
+
+</aside>
 
 <script>
 
-const button = document.getElementById("menu-button");
-const menu = document.getElementById("mobile-menu");
+const menu=document.getElementById("mobileMenu");
+const overlay=document.getElementById("overlay");
 
-button?.addEventListener("click", () => {
+document.getElementById("menuButton")?.addEventListener("click",()=>{
 
-    menu?.classList.toggle("hidden");
+menu.classList.remove("translate-x-full");
+
+overlay.classList.remove("hidden");
+
+});
+
+function fechar(){
+
+menu.classList.add("translate-x-full");
+
+overlay.classList.add("hidden");
+
+}
+
+document.getElementById("closeMenu")?.addEventListener("click",fechar);
+
+overlay?.addEventListener("click",fechar);
+
+document.querySelectorAll(".mobile-link").forEach(link=>{
+
+link.addEventListener("click",fechar);
 
 });
 
