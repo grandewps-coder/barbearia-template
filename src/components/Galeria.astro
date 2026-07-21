@@ -1,5 +1,6 @@
 ---
 import galeria from "../data/galeria.json";
+import empresa from "../data/empresa.json";
 import Container from "./ui/Container.astro";
 import Section from "./ui/Section.astro";
 import SectionTitle from "./ui/SectionTitle.astro";
@@ -16,29 +17,68 @@ import SectionTitle from "./ui/SectionTitle.astro";
 
     <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-      {galeria.map((foto) => (
+      {galeria.map((foto, index) => (
 
-        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+        <div
+          class={`group relative overflow-hidden rounded-3xl shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
+            index === 0 || index === 3
+              ? "lg:col-span-2"
+              : ""
+          }`}
+        >
 
           <img
             src={foto.imagem}
             alt={foto.titulo}
-            class="h-80 w-full object-cover transition duration-500 group-hover:scale-110"
+            class="h-72 w-full object-cover transition duration-700 group-hover:scale-110 md:h-80"
           />
 
-          <div class="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
 
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 transition duration-500 group-hover:opacity-100">
+          <div class="absolute bottom-0 left-0 right-0 translate-y-6 p-6 text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 
             <h3 class="text-xl font-bold">
+
               {foto.titulo}
+
             </h3>
+
+            <p class="mt-2 text-sm text-white/80">
+
+              Acabamento premium • Barbearia Fernandes
+
+            </p>
 
           </div>
 
         </div>
 
       ))}
+
+    </div>
+
+    <div class="mt-14 text-center">
+
+      <a
+        href={empresa.instagram}
+        target="_blank"
+        class="inline-flex items-center gap-3 rounded-full border border-neutral-300 px-8 py-4 font-semibold transition duration-300 hover:bg-black hover:text-white hover:shadow-xl"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-6 w-6"
+        >
+
+          <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+
+        </svg>
+
+        Ver mais trabalhos no Instagram
+
+      </a>
 
     </div>
 
